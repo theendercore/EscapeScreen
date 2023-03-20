@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "escape_screen",
+  "version": "${version}",
+  "name": "EscapeScreen",
+  "description": "A Mod that lets you leave a menu witha cusom keybind!",
+  "authors": [
+    "Ender"
+  ],
+  "contact": {
+    "website": "https://github.com/theendercore/EscapeScreen",
+    "repo": "https://github.com/theendercore/EscapeScreen"
+  },
+  "license": "MIT",
+  "icon": "assets/escape_screen/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.theendercore.escapescreen.EscapeScreenClient"
+    ]
+  },
+  "mixins": [
+    "EscapeScreen.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.17",
+    "fabric": "*",
+    "minecraft": ">=1.19.4"
+  }
+}
