@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "escape_screen",
   "version": "${version}",
-  "name": "EscapeScreen",
-  "description": "A Mod that lets you leave a menu witha cusom keybind!",
+  "name": "Escape Screen",
+  "description": "A mod to remap the esc key!",
   "authors": [
     "Ender"
   ],
