@@ -7,6 +7,7 @@
   ],
   "client": [
     "KeybindsScreenMixin",
+    "KeyboardMixin",
     "ScreenMixin"
   ],
   "injectors": {
