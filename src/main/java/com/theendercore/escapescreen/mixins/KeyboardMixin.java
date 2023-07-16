@@ -25,12 +25,10 @@ public class KeyboardMixin {
     @Inject(method = "onKey", at = @At("HEAD"))
     public void onKey(long window, int key, int scancode, int action, int modifiers, CallbackInfo ci) {
         if (window == this.client.getWindow().getHandle()) {
-            if (this.client.currentScreen == null || this.client.currentScreen.passEvents) {
-                if (this.client.currentScreen == null) {
-                    if (newEscKey.wasPressed()) {
-                        boolean bl3 = InputUtil.isKeyPressed(MinecraftClient.getInstance().getWindow().getHandle(), 292);
-                        this.client.openPauseMenu(bl3);
-                    }
+            if (this.client.currentScreen == null) {
+                if (newEscKey.wasPressed()) {
+                    boolean bl3 = InputUtil.isKeyPressed(MinecraftClient.getInstance().getWindow().getHandle(), 292);
+                    this.client.openPauseMenu(bl3);
                 }
             }
         }
