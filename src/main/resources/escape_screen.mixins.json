@@ -6,9 +6,9 @@
   "mixins": [
   ],
   "client": [
-    "KeybindsScreenMixin",
-    "KeyboardMixin",
-    "ScreenMixin"
+    "MultiScreenMixin",
+    "KeyBindingAccessor",
+    "KeyboardMixin"
   ],
   "injectors": {
     "defaultRequire": 1
