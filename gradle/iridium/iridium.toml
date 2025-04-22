@@ -6,7 +6,7 @@ githubRepo = "theendercore/EscapeScreen"
 discordServerInviteId = "KZ5Q364hEg"
 authors = [ "TheEnderCore" ]
 majorMinecraftVersion = "1.21"
-minecraftVersion = "1.21"
+minecraftVersion = "1.21.1"
 fabricLoaderVersion = "0.16.13"
 fabricApiVersion = "0.115.4+1.21.1"
 fabricLangKotlinVersion = "1.13.2+kotlin.2.1.20"
@@ -27,4 +27,4 @@ disableKotlin = true
 # MOJYARN: Yarn layered on top of the official Mojang mappings
 # CUSTOM: Custom mapping jar. Uses mappings version as file location
     type = "YARN"
-    version = "1.21+build.1"
+    version = "1.21.1+build.3"
