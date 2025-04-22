@@ -12,26 +12,15 @@ plugins {
     alias(libs.plugins.iridium.upload)
 }
 
-group = property("maven_group")!!
-version = property("mod_version")!!
-base.archivesName.set(modSettings.modId())
-
-val modrinth_id: String? by project
-val curse_id: String? by project
-
 repositories {
     maven("https://teamvoided.org/releases")
     maven("https://maven.terraformersmc.com/") { name = "Terraformers" }
     mavenCentral()
 }
 
-println("Task: " + gradle.startParameter.taskNames.joinToString(","))
-
 modSettings {
     entrypoint("client", "com.theendercore.escapescreen.EscapeScreenClient")
     mixinFile("${modId()}.mixins.json")
-//    mixinFile("${modId()}.mixins.json")
-//    accessWidener("${modId()}.accesswidener")
 }
 
 dependencies {
@@ -54,7 +43,7 @@ loom {
             client()
             ideConfigGenerated(true)
             runDir("run")
-            programArgs("--quickPlaySingleplayer", "test")
+            programArgs("--quickPlaySingleplayer", "test", "--username", "vDev")
         }
     }
 }
@@ -94,13 +83,11 @@ publishScript {
 
 uploadConfig {
 //    debugMode = true
-    modrinthId = modrinth_id
-    curseId = curse_id
+    modrinthId = "CV7Qwzma"
+    curseId = "840204"
 
     // FabricApi
-    modrinthDependency("P7dR8mSH", uploadConfig.REQUIRED)
     curseDependency("fabric-api", uploadConfig.REQUIRED)
     // Fabric Language Kotlin
-    modrinthDependency("Ha28R6CL", uploadConfig.REQUIRED)
     curseDependency("fabric-language-kotlin", uploadConfig.REQUIRED)
 }
