@@ -14,7 +14,6 @@ import net.minecraft.client.realms.gui.screen.RealmsLongRunningMcoTaskScreen;
 import net.minecraft.client.realms.gui.screen.RealmsSelectFileToUploadScreen;
 import net.minecraft.client.realms.gui.screen.RealmsTermsScreen;
 import net.minecraft.client.realms.gui.screen.RealmsUploadScreen;
-import org.spongepowered.asm.mixin.Debug;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
@@ -22,7 +21,6 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import static com.theendercore.escapescreen.EscapeScreenClient.getCode;
 import static com.theendercore.escapescreen.EscapeScreenClient.newEscKey;
 
-@Debug(export = true)
 @Environment(EnvType.CLIENT)
 @Mixin({Screen.class, KeybindsScreen.class, CreativeInventoryScreen.class, AnvilScreen.class, ConfirmScreen.class,
         ChatScreen.class, SleepingChatScreen.class, RealmsLongRunningMcoTaskScreen.class, RealmsTermsScreen.class,
