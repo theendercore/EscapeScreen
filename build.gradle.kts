@@ -89,6 +89,7 @@ uploadConfig {
     modrinthId = "CV7Qwzma"
     curseId = "840204"
 
+    changeLog = File("./changelog.md").readText()
     // FabricApi
     curseDependency("fabric-api", uploadConfig.REQUIRED)
     // Fabric Language Kotlin
