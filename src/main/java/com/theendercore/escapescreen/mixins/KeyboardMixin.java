@@ -12,7 +12,7 @@ import static com.theendercore.escapescreen.EscapeScreenClient.newEscKey;
 
 @Environment(EnvType.CLIENT)
 @Mixin(Keyboard.class)
-public class KeyboardMixin {
+public abstract class KeyboardMixin {
     @ModifyConstant(method = "onKey", constant = @Constant(intValue = 256))
     public int keyPressed(int constant, long window, int key, int scancode) {
         if (!newEscKey.isUnbound() && newEscKey.matchesKey(key, scancode)) {

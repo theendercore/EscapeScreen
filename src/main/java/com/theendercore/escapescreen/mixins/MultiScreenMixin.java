@@ -27,7 +27,7 @@ import static com.theendercore.escapescreen.EscapeScreenClient.newEscKey;
 @Mixin({Screen.class, KeybindsScreen.class, CreativeInventoryScreen.class, AnvilScreen.class, ConfirmScreen.class,
         ChatScreen.class, SleepingChatScreen.class, RealmsLongRunningMcoTaskScreen.class, RealmsTermsScreen.class,
         RealmsUploadScreen.class, RealmsSelectFileToUploadScreen.class, BackupPromptScreen.class})
-public class MultiScreenMixin {
+public abstract class MultiScreenMixin {
     @ModifyConstant(method = "keyPressed", constant = @Constant(intValue = 256))
     public int keyPressed(int constant, int keyCode, int scanCode) {
         if (!newEscKey.isUnbound() && newEscKey.matchesKey(keyCode, scanCode)) {
