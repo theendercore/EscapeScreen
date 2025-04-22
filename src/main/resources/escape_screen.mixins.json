@@ -3,12 +3,13 @@
   "minVersion": "0.8",
   "package": "com.theendercore.escapescreen.mixins",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [
-  ],
+  "plugin": "com.theendercore.escapescreen.mixins.EscapeScreenMixinPlugin",
+  "mixins": [],
   "client": [
-    "MultiScreenMixin",
+    "IPlatformHelperMixin",
     "KeyBindingAccessor",
-    "KeyboardMixin"
+    "KeyboardMixin",
+    "MultiScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

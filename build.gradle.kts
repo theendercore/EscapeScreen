@@ -15,6 +15,7 @@ plugins {
 repositories {
     maven("https://teamvoided.org/releases")
     maven("https://maven.terraformersmc.com/") { name = "Terraformers" }
+    maven("https://maven.blamejared.com") { name = "BlameJared Maven" }
     mavenCentral()
 }
 
@@ -26,6 +27,8 @@ modSettings {
 dependencies {
     modImplementation(fileTree("libs"))
     modImplementation(libs.modmenu)
+
+    modImplementation(libs.controlling)
 }
 
 loom {

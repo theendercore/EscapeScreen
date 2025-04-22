@@ -4,9 +4,11 @@ fabric-loom = "1.10-SNAPSHOT"
 iridium = "3.4.0"
 
 modmenu = "11.0.3"
+controlling = "18.0.4"
 
 [libraries]
 modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
+controlling = { module = "com.blamejared.controlling:Controlling-fabric-1.21", version.ref = "controlling"}
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
