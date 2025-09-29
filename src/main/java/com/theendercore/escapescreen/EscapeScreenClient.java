@@ -1,6 +1,5 @@
 package com.theendercore.escapescreen;
 
-import com.theendercore.escapescreen.mixins.KeyBindingAccessor;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.KeyMapping;
@@ -16,7 +15,7 @@ public class EscapeScreenClient implements ClientModInitializer {
     public void onInitializeClient() {
     }
 
-    public static int getCode(KeyMapping key) {
-        return ((KeyBindingAccessor) key).escpe_screen_getBoundKey().getValue();
+    public static int newEscape() {
+        return KeyBindingHelper.getBoundKeyOf(newEscKey).getValue();
     }
 }

@@ -1,25 +1,27 @@
 package com.theendercore.escapescreen.mixins;
 
+import com.mojang.realmsclient.gui.screens.RealmsLongRunningMcoTaskScreen;
+import com.mojang.realmsclient.gui.screens.RealmsTermsScreen;
+import com.mojang.realmsclient.gui.screens.RealmsUploadScreen;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.screens.BackupConfirmScreen;
+import net.minecraft.client.gui.screens.ConfirmScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
-import static com.theendercore.escapescreen.EscapeScreenClient.getCode;
 import static com.theendercore.escapescreen.EscapeScreenClient.newEscKey;
+import static com.theendercore.escapescreen.EscapeScreenClient.newEscape;
+
 
 @Environment(EnvType.CLIENT)
-@Mixin({Screen.class, /*KeybindsScreen.class, CreativeInventoryScreen.class, AnvilScreen.class, ConfirmScreen.class,
-        ChatScreen.class, SleepingChatScreen.class, RealmsLongRunningMcoTaskScreen.class, RealmsTermsScreen.class,
-        RealmsUploadScreen.class, RealmsSelectFileToUploadScreen.class, BackupPromptScreen.class*/})
+@Mixin({BackupConfirmScreen.class,
+        RealmsUploadScreen.class, RealmsTermsScreen.class, RealmsLongRunningMcoTaskScreen.class,
+        ConfirmScreen.class})
 public abstract class MultiScreenMixin {
-//    @ModifyConstant(method = "keyPressed", constant = @Constant(intValue = 256))
-//    public int keyPressed(int constant, int keyCode, int scanCode) {
-//        if (!newEscKey.isUnbound() && newEscKey.matchesKey(keyCode, scanCode)) {
-//            return getCode(newEscKey);
-//        }
-//        return constant;
-//    }
+    @ModifyConstant(method = "keyPressed", constant = @Constant(intValue = 256))
+    public int keyPressed(int constant) {
+        return newEscKey.isUnbound() ? constant : newEscape();
+    }
 }
