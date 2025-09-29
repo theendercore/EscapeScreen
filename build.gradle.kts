@@ -26,9 +26,9 @@ modSettings {
 
 dependencies {
     modImplementation(fileTree("libs"))
-    modImplementation(libs.modmenu)
+//    modImplementation(libs.modmenu)
 
-    modImplementation(libs.controlling)
+    modCompileOnly(libs.controlling)
 }
 
 loom {
