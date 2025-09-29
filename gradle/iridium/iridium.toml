@@ -26,5 +26,5 @@ disableKotlin = true
     # MOJPARCH: Parchment layered on top of the official Mojang mappings
     # MOJYARN: Yarn layered on top of the official Mojang mappings
     # CUSTOM: Custom mapping jar. Uses mappings version as file location
-    type = "YARN"
-    version = "1.21.9-rc1+build.1"
+    type = "MOJANG"
+    version = "1.21.9-rc1"

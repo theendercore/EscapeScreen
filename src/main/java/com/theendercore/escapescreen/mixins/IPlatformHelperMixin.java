@@ -2,7 +2,6 @@ package com.theendercore.escapescreen.mixins;
 
 import com.blamejared.controlling.client.NewKeyBindsScreen;
 import com.blamejared.controlling.platform.IPlatformHelper;
-import net.minecraft.client.option.GameOptions;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
