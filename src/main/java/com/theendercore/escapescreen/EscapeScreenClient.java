@@ -8,7 +8,7 @@ import net.minecraft.client.KeyMapping;
 public class EscapeScreenClient implements ClientModInitializer {
 
     public static KeyMapping newEscKey = KeyBindingHelper.registerKeyBinding(
-            new KeyMapping("key.new_esc.esc", -1, KeyMapping.Category.INVENTORY)
+            new KeyMapping("key.new_esc.esc", -1, KeyMapping.Category.MISC)
     );
 
     @Override
