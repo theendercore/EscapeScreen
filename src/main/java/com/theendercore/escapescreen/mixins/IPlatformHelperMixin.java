@@ -12,11 +12,11 @@ import static com.theendercore.escapescreen.EscapeScreenClient.newEscKey;
 
 @Mixin(IPlatformHelper.class)
 public interface IPlatformHelperMixin {
-    @ModifyConstant(method = "handleKeyPress", constant = @Constant(intValue = 256))
-    default int keyPressed(int constant, NewKeyBindsScreen screen, GameOptions options, int key, int scancode, int mods) {
-        if (!newEscKey.isUnbound() && newEscKey.matchesKey(key, scancode)) {
-            return getCode(newEscKey);
-        }
-        return constant;
-    }
+//    @ModifyConstant(method = "handleKeyPress", constant = @Constant(intValue = 256))
+//    default int keyPressed(int constant, NewKeyBindsScreen screen, GameOptions options, int key, int scancode, int mods) {
+//        if (!newEscKey.isUnbound() && newEscKey.matchesKey(key, scancode)) {
+//            return getCode(newEscKey);
+//        }
+//        return constant;
+//    }
 }
