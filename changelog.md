@@ -1,4 +1,1 @@
-- Custom Esc is no longer assigned by default
-- Re-wrote mod to work a lot better
-- Fixed issue with new esc key not working in the create menu search bar (and many other Screens)
-- Fixed incompatibility with Controlling
+- 1.21.9+ update
